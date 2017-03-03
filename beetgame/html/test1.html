@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            list-style: none;
+        }
+
+        #wraper{
+            width: 500px;
+            height: 600px;
+            border:2px solid black;
+            overflow: hidden;
+        }
+        li{
+            height:80px;
+            background-color: red;
+            border-bottom:1px solid black;
+        }
+    </style>
+    <script src="../js/jroll.2.4.5.min.js"></script>
+</head>
+<body>
+  <div id="wraper">
+      <div class="scroller">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </div>
+  </div>
+  <script>
+      var jroll=new JRoll("#wraper").refresh();
+      jroll.on('scrollEnd',function(){
+          console.log("华东已经结束")
+          if(this.y==this.maxScrollY){
+              console.log("我到底了")
+          }
+
+      })
+  </script>
+</body>
+</html>

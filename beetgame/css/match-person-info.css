@@ -1,0 +1,470 @@
+@charset "utf-8";
+/*比赛进行中*/
+/*未进行*/
+/*已完成*/
+/*************************************/
+h2 {
+  font-size: 0.68rem;
+  color: #ffffff;
+  text-align: center;
+  line-height: 2.04rem;
+  font-weight: bold;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+  background: #171712;
+}
+.active {
+  color: #ffffff;
+  border-bottom: 0.08rem solid #f7db00;
+}
+/*比赛头部始*/
+header.hearder {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+header.hearder .macth-title {
+  position: relative;
+}
+header.hearder .goback {
+  position: absolute;
+  width: 1.14rem;
+  height: 2.04rem;
+  background: url("../img/images/goback-icon_02.png");
+  background-size: 100%;
+}
+header.hearder .match-ing {
+  padding: 0 1.67rem;
+}
+header.hearder .macth-swiper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+/*头部进程选中样式*/
+.active-check{
+  color: #ffffff;
+}
+/*swiper滚动条设置*/
+.content-info .under-line{
+  width: 100%;
+  height:0.08rem;
+  position:absolute;
+  left: 0;
+  top:0;
+}
+.swiper-scrollbar-drag{
+  background-color: #f7db00;
+  position:absolute;
+  height:100%;
+}
+/*******************************/
+header.hearder .macth-title-info {
+  font-size: 0.56rem;
+  display: inline-block;
+  padding: 0.56rem 0.35rem;
+}
+/*最外包装层*/
+.match-wraper {
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  padding-top: 4rem;
+  background-color: #171712;
+  z-index: 3;
+}
+.match-wraper .content-info {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top:4rem;
+  bottom:0;
+}
+.match-swiper-box {
+  width: 300%;
+}
+/*盒子宽度设置*/
+.doing-match,
+.nodoing-match,
+.ending-match {
+  float: left;
+  width: 33.333%;
+}
+/*奖金池*/
+.doing-match .price-tag,
+.nodoing-match .price-tag,
+.ending-match .price-tag {
+  margin-top: 0.4rem;
+  padding: 0.4rem 2rem;
+  background-color: #262626;
+}
+.doing-match .price-tag img,
+.nodoing-match .price-tag img,
+.ending-match .price-tag img,
+.doing-match .price-tag span,
+.nodoing-match .price-tag span,
+.ending-match .price-tag span {
+  vertical-align: middle;
+}
+.doing-match .price-tag .price-tag-w,
+.nodoing-match .price-tag .price-tag-w,
+.ending-match .price-tag .price-tag-w {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.doing-match .price-tag .tag-l p,
+.nodoing-match .price-tag .tag-l p,
+.ending-match .price-tag .tag-l p,
+.doing-match .price-tag .tag-r p,
+.nodoing-match .price-tag .tag-r p,
+.ending-match .price-tag .tag-r p {
+  font-size: 0;
+}
+.doing-match .price-tag .tag-l p img,
+.nodoing-match .price-tag .tag-l p img,
+.ending-match .price-tag .tag-l p img,
+.doing-match .price-tag .tag-r p img,
+.nodoing-match .price-tag .tag-r p img,
+.ending-match .price-tag .tag-r p img {
+  width: 0.52rem;
+  height: 0.52rem;
+}
+.doing-match .price-tag .tag-l p:nth-of-type(1) span,
+.nodoing-match .price-tag .tag-l p:nth-of-type(1) span,
+.ending-match .price-tag .tag-l p:nth-of-type(1) span,
+.doing-match .price-tag .tag-r p:nth-of-type(1) span,
+.nodoing-match .price-tag .tag-r p:nth-of-type(1) span,
+.ending-match .price-tag .tag-r p:nth-of-type(1) span {
+  font-size: 0.48rem;
+  line-height: 0.48rem;
+  color: #b0b0b0;
+  margin-left: 0.2rem;
+}
+.doing-match .price-tag .tag-l p:nth-of-type(2) span,
+.nodoing-match .price-tag .tag-l p:nth-of-type(2) span,
+.ending-match .price-tag .tag-l p:nth-of-type(2) span,
+.doing-match .price-tag .tag-r p:nth-of-type(2) span,
+.nodoing-match .price-tag .tag-r p:nth-of-type(2) span,
+.ending-match .price-tag .tag-r p:nth-of-type(2) span {
+  font-size: 0.56rem;
+  line-height: 0.56rem;
+  color: #f7db00;
+  margin-right: 0.2rem;
+}
+.doing-match .price-tag .tag-l p:nth-of-type(2),
+.nodoing-match .price-tag .tag-l p:nth-of-type(2),
+.ending-match .price-tag .tag-l p:nth-of-type(2),
+.doing-match .price-tag .tag-r p:nth-of-type(2),
+.nodoing-match .price-tag .tag-r p:nth-of-type(2),
+.ending-match .price-tag .tag-r p:nth-of-type(2) {
+  margin-top: 0.4rem;
+}
+.doing-match .price-tag .tag-l p:nth-of-type(3),
+.nodoing-match .price-tag .tag-l p:nth-of-type(3),
+.ending-match .price-tag .tag-l p:nth-of-type(3),
+.doing-match .price-tag .tag-r p:nth-of-type(3),
+.nodoing-match .price-tag .tag-r p:nth-of-type(3),
+.ending-match .price-tag .tag-r p:nth-of-type(3) {
+  margin-top: 0.2rem;
+}
+.doing-match .price-tag .tag-l p:nth-of-type(3) span,
+.nodoing-match .price-tag .tag-l p:nth-of-type(3) span,
+.ending-match .price-tag .tag-l p:nth-of-type(3) span {
+  font-size: 0.6rem;
+  color: #ffffff;
+  margin-left: 0.2rem;
+  line-height: 0.6rem;
+}
+.doing-match .price-tag .tag-r p img,
+.nodoing-match .price-tag .tag-r p img,
+.ending-match .price-tag .tag-r p img {
+  width: 0.52rem;
+  height: 0.52rem;
+}
+.doing-match .price-tag .tag-r p,
+.nodoing-match .price-tag .tag-r p,
+.ending-match .price-tag .tag-r p {
+  text-align: center;
+}
+.doing-match .price-tag .tag-r p:nth-of-type(3) span,
+.nodoing-match .price-tag .tag-r p:nth-of-type(3) span,
+.ending-match .price-tag .tag-r p:nth-of-type(3) span {
+  margin-right: 0.2rem;
+  font-size: 0.56rem;
+  color: #f7db00;
+  line-height: 0.56rem;
+}
+/*进度条*/
+.pogress-bar-wrap {
+  margin-top: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #262626;
+}
+.pogress-bar-wrap .match-name {
+  font-size: 0.56rem;
+  line-height: 0.56rem;
+  color: #ffffff;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.pogress-bar-wrap h3 {
+  margin-top: 0.6rem;
+  font-size: 0;
+  text-align: center;
+}
+.pogress-bar-wrap h3 span,
+.pogress-bar-wrap h3 i {
+  font-size: 0.52rem;
+  line-height: 0.52rem;
+  color: #b0b0b0;
+  vertical-align: middle;
+}
+.pogress-bar-wrap h3 i {
+  color: #f7db00;
+  font-weight: bold;
+  margin-left: 0.24rem;
+}
+.pogress-bar-wrap h3 img {
+  vertical-align: middle;
+  width: 0.52rem;
+  height: 0.52rem;
+  margin-left: 0.2rem;
+}
+.pogress-bar-wrap .progress-strat {
+  width: 100%;
+  padding: 0 0.4rem;
+  border-bottom: 1px solid #1b1a1a;
+}
+.pogress-bar-wrap .progress-strat .progress-bar {
+  width: 100%;
+  padding: 0.6rem 0;
+}
+.pogress-bar-wrap .progress-strat .progress-bar .layer-photo {
+  display: block;
+  width: 1.4rem;
+  height: 1.6rem;
+  background: url("../img/images/person-photo_11.png");
+  background-size: 100%;
+}
+.pogress-bar-wrap .progress-strat .progress-bar .father-bar {
+  width: 100%;
+  height: 0.12rem;
+  background: #777777;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 0.12rem;
+  /*需求尺寸*/
+}
+.pogress-bar-wrap .progress-strat .progress-bar .father-bar .movebar {
+  width: 3.6rem;
+  position: absolute;
+  height: 100%;
+  background-color: #74b8e0;
+  -webkit-box-shadow: 0 0 30px 0 #1a5479;
+  border-radius: 5px;
+  right: 0;
+  top: 0;
+}
+.pogress-bar-wrap .indicato {
+  display: inline-block;
+  text-align: center;
+  font-size: 0;
+}
+.pogress-bar-wrap .indicato i {
+  font-size: 0.24rem;
+  color: #ffc952;
+  text-align: center;
+}
+.pogress-bar-wrap .indicato .reward {
+  color: #ffc952;
+  font-size: 0.48rem;
+}
+.now-states {
+  padding: 0.4rem 0 0 0;
+  display: flex;
+  justify-content: space-around;
+}
+.now-states .nowranking span,
+.now-states .priceofmatch span,
+.now-states .Fan span,
+.now-states .nowranking img,
+.now-states .priceofmatch img,
+.now-states .Fan img {
+  vertical-align: middle;
+}
+.now-states .nowranking p,
+.now-states .priceofmatch p,
+.now-states .Fan p {
+  font-size: 0;
+  text-align: center;
+}
+.now-states .nowranking p:nth-of-type(1) span,
+.now-states .priceofmatch p:nth-of-type(1) span,
+.now-states .Fan p:nth-of-type(1) span {
+  font-size: 0.48rem;
+  color: #b0b0b0;
+  line-height: 0.48rem;
+}
+.now-states .nowranking p:nth-of-type(1) img,
+.now-states .priceofmatch p:nth-of-type(1) img,
+.now-states .Fan p:nth-of-type(1) img {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-right: 0.2rem;
+}
+.now-states .nowranking p:nth-of-type(2),
+.now-states .priceofmatch p:nth-of-type(2),
+.now-states .Fan p:nth-of-type(2) {
+  font-size: 0;
+  margin-top: 0.2rem;
+}
+.now-states .nowranking p:nth-of-type(2) span,
+.now-states .priceofmatch p:nth-of-type(2) span,
+.now-states .Fan p:nth-of-type(2) span {
+  font-size: 0.52rem;
+  color: #ffffff;
+  line-height: 0.52rem;
+}
+.now-states .priceofmatch p:nth-of-type(2) img {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-left: 0.2rem;
+  vertical-align: -8px;
+}
+.now-states .priceofmatch {
+  position: relative;
+}
+.now-states .priceofmatch .linebor {
+  width: 1px;
+  height: 0.56rem;
+  position: absolute;
+  background-color: #424242;
+  top: 0.24rem;
+}
+.now-states .priceofmatch .linebor:nth-of-type(1) {
+  left: -0.96rem;
+}
+.now-states .priceofmatch .linebor:nth-of-type(2) {
+  right: -0.96rem;
+}
+/*侧边盒子未进行/*************************************/
+.nodoing-match .match-list {
+  background-color: #262626;
+  margin-top: 0.2rem;
+  padding: 0 0.8rem;
+}
+.nodoing-match .match-list .list-up {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #1b1a1a;
+}
+.nodoing-match .match-list .list-up .list-up-title {
+  font-size: 0.56rem;
+  color: #ffffff;
+  line-height: 0.56rem;
+  font-weight: bold;
+}
+.nodoing-match .match-list .list-up .flex-name {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0 0.68rem 0 0.98rem;
+  display: flex;
+  justify-content: space-between;
+}
+.nodoing-match .match-list .list-up .flex-name img,
+.nodoing-match .match-list .list-up .flex-name span,
+.nodoing-match .match-list .list-up .flex-name i {
+  vertical-align: middle;
+}
+.nodoing-match .match-list .list-up .flex-name p {
+  font-size: 0;
+  text-align: center;
+}
+.nodoing-match .match-list .list-up .flex-name .person-n p:nth-of-type(1) img {
+  width: 0.56rem;
+  height: 0.48rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-price p:nth-of-type(1) img {
+  width: 0.48rem;
+  height: 0.48rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-tatal p:nth-of-type(1) img {
+  width: 0.4rem;
+  height: 0.48rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-n p:nth-of-type(1) span,
+.nodoing-match .match-list .list-up .flex-name .person-price p:nth-of-type(1) span,
+.nodoing-match .match-list .list-up .flex-name .person-tatal p:nth-of-type(1) span {
+  font-size: 0.48rem;
+  color: #b0b0b0;
+  line-height: 0.48rem;
+  margin-left: 0.2rem;
+  vertical-align: middle;
+}
+.nodoing-match .match-list .list-up .flex-name .person-price p:nth-of-type(2) img,
+.nodoing-match .match-list .list-up .flex-name .person-tatal p:nth-of-type(2) img {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-left: 0.2rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-n p:nth-of-type(2) span,
+.nodoing-match .match-list .list-up .flex-name .person-price p:nth-of-type(2) span,
+.nodoing-match .match-list .list-up .flex-name .person-tatal p:nth-of-type(2) span {
+  font-size: 0.52rem;
+  color: #ffffff;
+  line-height: 0.52rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-n p:nth-of-type(2),
+.nodoing-match .match-list .list-up .flex-name .person-price p:nth-of-type(2),
+.nodoing-match .match-list .list-up .flex-name .person-tatal p:nth-of-type(2) {
+  margin-top: 0.2rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-price {
+  position: relative;
+}
+.nodoing-match .match-list .list-up .flex-name .person-price .borline {
+  position: absolute;
+  top: 0.27rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-price .borline:nth-of-type(1) {
+  width: 1px;
+  height: 0.74rem;
+  background-color: #424242;
+  left: -0.96rem;
+}
+.nodoing-match .match-list .list-up .flex-name .person-price .borline:nth-of-type(2) {
+  width: 1px;
+  height: 0.74rem;
+  background-color: #424242;
+  right: -0.96rem;
+}
+.nodoing-match .match-list .list-down {
+  padding: 0.4rem 0;
+}
+.nodoing-match .match-list .list-down p {
+  font-size: 0;
+  line-height: 0.48rem;
+}
+.nodoing-match .match-list .list-down img,
+.nodoing-match .match-list span {
+  vertical-align: middle;
+}
+.nodoing-match .match-list .list-down img {
+  width: 0.48rem;
+  height: 0.48rem;
+}
+.nodoing-match .match-list .list-down p span {
+  font-size: 0.48rem;
+  color: #b0b0b0;
+  margin-left: 0.2rem;
+}
+.player-bar{
+
+}
+/*iscroll样式*/

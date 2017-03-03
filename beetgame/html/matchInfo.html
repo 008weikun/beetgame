@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html id="oHtml"> <!-- 比赛流程页-->
+<head lang="en" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <title></title>
+    <link rel="stylesheet" href="../css/Match-styleReset.css"/>
+    <link rel="stylesheet" href="../css/swiper-3.4.0.min.css"/>
+    <link rel="stylesheet" href="../css/match-person-info.css"/>
+    <script src="../js/jquery-1.8.3.min.js"></script>
+    <script src="../js/swiper-3.4.0.min.js"></script>
+    <script src="../js/jroll.2.4.5.js"></script>
+    <script src="../js/matchInfo.js"></script>
+    <script>
+        function setRem(){
+            var oHtml=document.getElementById("oHtml"),
+                screenW=oHtml.getBoundingClientRect().width;
+            oHtml.style.fontSize=screenW/15+"px";
+        }
+        setRem();
+        window.addEventListener("orientation" in window?"orientationchange":"resize",setRem);
+    </script>
+</head>
+<body>
+   <header class="hearder pubcol">
+       <span class="goback"></span>
+       <h2 class="macth-title">我的比赛</h2>
+       <div class="match-ing">
+           <div class="macth-swiper">
+               <span class="macth-title-info active-check">进行中</span>
+               <span class="macth-title-info">未开始</span>
+               <span class="macth-title-info">已结束</span>
+           </div>
+       </div>
+   </header>
+   <section class="match-wraper">
+       <section class="content-info swiper-container">
+           <div class="under-line swiper-scrollbar"></div><!--//溢出隐藏-->
+           <section class="match-swiper-box swiper-wrapper"><!--移动盒子-->
+               <div class="doing-match swiper-slide" id="doing">
+                   <div class="scroller">
+                       <div class="price-tag">
+                           <div class="price-tag-w">
+                               <div class="tag-l">
+                                   <p>
+                                       <img src="../img/images/price-tag_11.png" alt=""/>
+                                       <span>总参赛费</span>
+                                   </p>
+                                   <p>
+                                       <span class="total-pay">2000w</span>
+                                       <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                   </p>
+                                   <p>
+                                       <img src="../img/images/jian_19.png" alt=""/>
+                                       <span><i style="color: #ffffff" class="room_total">0</i>场</span>
+                                   </p>
+                               </div>
+                               <div class="tag-r">
+                                   <p>
+                                       <img src="../img/images/price-tag_11.png" alt=""/>
+                                       <span>预计总奖金</span>
+                                   </p>
+                                   <p>
+                                       <span class="expect">2000w</span>
+                                       <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                   </p>
+                                   <p>
+                                       <span class="cuprum">300</span>
+                                       <img src="../img/images/icon-b-y_07.png" alt=""/>
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="pogress-bar-wrap">
+                           <div class="wrapcontent">
+                               <p  class="match-name">随便的叫什么吧</p>
+                               <h3>
+                                   <span>预计奖金</span>
+                                   <i class="price-limit">2000w</i>
+                                   <img src="../img/images/icon-b-y_03.png" class="icon-font" alt=""/>
+                               </h3>
+                               <div class="progress-strat">
+                                   <div class="progress-bar">
+                                       <span class="layer-photo"></span>
+                                       <nav class="father-bar"><!--动画条-->
+                                           <span class="movebar"></span>
+                                       </nav>
+                                       <p class="indicato">
+                                           <i>▲</i><br/>
+                                           <strong class="reward"></strong>
+                                       </p>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="now-states">
+                               <div class="nowranking">
+                                   <p>
+                                       <img src="../img/images/icon-15_14.png" alt=""/>
+                                       <span>当前排名</span>
+                                   </p>
+                                   <p><span class="now-rate"></span></p>
+                               </div>
+                               <div class="priceofmatch">
+                                   <p>
+                                       <img src="../img/images/circletag_08.png" alt=""/>
+                                       <span>参赛费</span>
+                                   </p>
+                                   <p>
+                                       <span class="programe-fair"></span>
+                                       <img src="../img/images/icon-b-y_03.png" class="thunbnail" alt=""/>
+                                   </p>
+                                   <span class="linebor"></span>
+                                   <span class="linebor"></span>
+                               </div>
+                               <div class="Fan">
+                                   <p>
+                                       <img src="../img/images/fan-price_13.png" alt=""/>
+                                       <span>Fan值</span>
+                                   </p>
+                                   <p><span class="fan-val"></span></p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>                                   <!--添加上下滑动盒子-->
+               </div><!--进行中-->
+               <div class="nodoing-match swiper-slide" id="notstart"><!--未进行-->
+                   <div class="scroller">
+                       <div class="price-tag">
+                           <div class="price-tag-w">
+                               <div class="tag-l">
+                                   <p>
+                                       <img src="../img/images/price-tag_11.png" alt=""/>
+                                       <span>总参赛费</span>
+                                   </p>
+                                   <p>
+                                       <span class="total-pay">2000w</span>
+                                       <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                   </p>
+                                   <p>
+                                       <img src="../img/images/jian_19.png" alt=""/>
+                                       <span><i style="color: #ffffff" class="room_total">0</i>场</span>
+                                   </p>
+                               </div>
+                               <div class="tag-r">
+                                   <p>
+                                       <img src="../img/images/price-tag_11.png" alt=""/>
+                                       <span>总奖金</span>
+                                   </p>
+                                   <p>
+                                       <span class="expect">2000w</span>
+                                       <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                   </p>
+                                   <p>
+                                       <span class="cuprum">300</span>
+                                       <img src="../img/images/icon-b-y_07.png" alt=""/>
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="match-list">
+                           <div class="list-up">
+                               <p class="list-up-title">霸气的名字</p>
+                               <div class="flex-name">
+                                   <div class="person-n">
+                                       <p>
+                                           <img src="../img/images/person-icon_03.png" alt=""/>
+                                           <span>参与人数</span>
+                                       </p>
+                                       <p>
+                                           <span class="active_player">100</span><i>/500</i>
+                                       </p>
+                                   </div>
+                                   <div class="person-price">
+                                       <p>
+                                           <img src="../img/images/clock-timer_05.png" alt=""/>
+                                           <span>参赛费</span>
+                                       </p>
+                                       <p>
+                                           <span class="activepay">123</span>
+                                           <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                       </p>
+                                       <span class="borline"></span>
+                                       <span class="borline"></span>
+                                   </div>
+                                   <div class="person-tatal">
+                                       <p>
+                                           <img src="../img/images/price-tag_11.png" alt=""/>
+                                           <span>奖金池</span>
+                                       </p>
+                                       <p>
+                                           <span class="price-pay">2000w</span>
+                                           <img src="../img/images/icon-b-y_03.png" alt="" class="buns-type"/>
+                                       </p>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="list-down">
+                               <p>
+                                   <img src="../img/images/clock-time_03.png" alt=""/>
+                                   <span class="active-time">2017/2/56  15:00</span>
+                               </p>
+                           </div>
+                       </div>
+                   </div>
+                   <!--未开始比赛列表-->
+               </div><!--未进行-->
+               <div class="ending-match swiper-slide" id="end">
+                   <div class="scroller">
+                       <div class="price-tag">
+                           <div class="price-tag-w">
+                               <div class="tag-l">
+                                   <p>
+                                       <img src="../img/images/price-tag_11.png" alt=""/>
+                                       <span>总参赛费</span>
+                                   </p>
+                                   <p>
+                                       <span class="total-pay">2000w</span>
+                                       <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                   </p>
+                                   <p>
+                                       <img src="../img/images/jian_19.png" alt=""/>
+                                       <span><i style="color: #ffffff" class="room_total">0</i>场</span>
+                                   </p>
+                               </div>
+                               <div class="tag-r">
+                                   <p>
+                                       <img src="../img/images/price-tag_11.png" alt=""/>
+                                       <span>奖金池</span>
+                                   </p>
+                                   <p>
+                                       <span class="expect">2000w</span>
+                                       <img src="../img/images/icon-b-y_03.png" alt=""/>
+                                   </p>
+                                   <p>
+                                       <span class="cuprum">300</span>
+                                       <img src="../img/images/icon-b-y_07.png" alt=""/>
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="pogress-bar-wrap">
+                           <div class="wrapcontent">
+                               <p  class="match-name">随便的叫什么吧</p>
+                               <h3>
+                                   <span>预计奖金</span>
+                                   <i class="price-limit">2000w</i>
+                                   <img src="../img/images/icon-b-y_03.png" class="icon-font" alt=""/>
+                               </h3>
+                               <div class="progress-strat">
+                                   <div class="progress-bar">
+                                       <span class="layer-photo"></span>
+                                       <nav class="father-bar"><!--动画条-->
+                                           <span class="movebar"></span>
+                                       </nav>
+                                       <p class="indicato">
+                                           <i>▲</i><br/>
+                                           <strong class="reward"></strong>
+                                       </p>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="now-states">
+                               <div class="nowranking">
+                                   <p>
+                                       <img src="../img/images/icon-15_14.png" alt=""/>
+                                       <span>当前排名</span>
+                                   </p>
+                                   <p><span class="now-rate"></span></p>
+                               </div>
+                               <div class="priceofmatch">
+                                   <p>
+                                       <img src="../img/images/circletag_08.png" alt=""/>
+                                       <span>参赛费</span>
+                                   </p>
+                                   <p>
+                                       <span class="programe-fair"></span>
+                                       <img src="../img/images/icon-b-y_03.png" class="thunbnail" alt=""/>
+                                   </p>
+                                   <span class="linebor"></span>
+                                   <span class="linebor"></span>
+                               </div>
+                               <div class="Fan">
+                                   <p>
+                                       <img src="../img/images/fan-price_13.png" alt=""/>
+                                       <span>Fan值</span>
+                                   </p>
+                                   <p><span class="fan-val"></span></p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div><!--已结束-->
+           </section>
+       </section>
+   </section>
+   <script language="javascript">
+       (function swiperConfig(){
+           var mySwiper = new Swiper('.swiper-container',{
+               scrollbar:'.swiper-scrollbar',
+               scrollbarHide:false,
+               onTransitionEnd:function(swiper) {
+                   $(".macth-title-info")
+                   .eq(swiper.activeIndex).addClass("active-check")
+                   .siblings().removeClass("active-check");
+               }
+           });
+       })();
+
+   </script>
+</body>
+</html>
